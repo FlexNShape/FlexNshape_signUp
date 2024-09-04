@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login-page</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="media.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      margin: 0;
+      background-color: #17181f;
+    }
+
+    .container {
+      width: 500px;
+      padding: 20px;
+      background: transparent;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h2 {
+      margin-top: 0;
+      color: #8fff00;
+    }
+
+    .container input {
+      width: 95%;
+      padding: 10px;
+      margin: 5px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: transparent;
+      color: #fff;
+    }
+
+    .container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .container button:hover {
+      background-color: #0056b3;
+    }
+
+    .message {
+      color: red;
+      font-size: 14px;
+    }
+    #user-name{
+      display: none;
+      color:#fff; 
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <div class="hdiv1">
+      <div class="hsubdiv1">
+        <a href="#"><img src="flexNshape-icon bg removed.png" alt="icon" />
+        </a>
+      </div>
+      <div class="hsubdiv2">
+         <!---->
+        <ul class="side-bar">
+          <li onclick=hidesidebar()> <img src="close_img.png" alt="image"></li>
+          <li><a href="https://flexnshape.github.io/flexNshpe.com/">Home</a></li>
+          <li><a href="#about-us">About us</a></li>
+          <li><a href="#">Sports</a></li>
+          <li><a href="#fitness-exercises">Fitness</a></li>
+          <a id="user-name" href="#">User name</a>
+          <div id="signup"><a href="#">Sign up</a></div>
+          <div class="login"><a href="#">Login</a></div>
+        </ul>
+        <!---->
+        <ul class="list-items items">
+          <li><a href="https://flexnshape.github.io/flexNshpe.com/">Home</a></li>
+          <li><a href="#about-us">About us</a></li>
+          <li><a href="#">Sports</a></li>
+          <li><a href="#fitness-exercises">Fitness</a></li>
+          <a id="user-name" href="#">User name</a>
+          <div id="signup"><a href="#">Sign up</a></div>
+          <div class="login"><a href="#">Login</a></div>
+        </ul>
+        <li class="ham_bgr" onclick=openSidebar()><img src="hamburegr_image.png" alt="bar"></li>
+      </div>
+      <div class="hsubdiv3">
+        <button class="contact-us"><a href=" https://flexnshape.github.io/FlexNShape_ContactUs_Form/
+">Contact us</a></button>
+      </div>
+    </div>
+  </header>
+  <!--sign up-->
+  <div id="sign-up-form">
+    <div class="container">
+      <h2>Sign up</h2>
+      <form name='submit-to-google-sheet'>
+        <input
+          type="text"
+          id="firstName"
+          name="First Name"
+          placeholder="First Name"
+          required />
+        <input
+          type="text"
+          id="lastName"
+          name="Last Name"
+          placeholder="Last Name"
+          required />
+        <input
+          type="text"
+          id="registerEmail"
+          placeholder="Email"
+          name="Email Address"
+          required />
+        <input
+          type="password"
+          id="registerPassword"
+          name="Users Password"
+          placeholder="Password"
+          required />
+        <button class="btn-signUp" type="submit">Sign Up</button>
+        <div class="google-sign-up">
+          <a href="https://flexnshape.github.io/flexNshpe.com/">
+            <i class="fa-solid fa-house"></i>
+            <p>Back to home page</p>
+          </a>
+        </div>
+        <div class="already-account">
+          <p>Already have account?</p>
+          <a id="login-btn" href="#">Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!--login-->
+  <div id="login-form" style="display: none;">
+    <div class="container">
+      <h2>Login</h2>
+      <form >
+        <input
+          type="text"
+          id="registerUsername"
+          placeholder="Email"
+          name="Email Address"
+          required />
+        <input
+          type="password"
+          id="registerPassword"
+          placeholder="Password"
+          name="Password"
+          required />
+        <button>Login</button>
+        <div class="no-account">
+          <a href="#">forgot password?</a>
+          <p>Don't have any account?</p>
+          <a href="#" id="signup-btn">Sign Up</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="f-p-1">
+      <img src="flexNshape-icon bg removed.png" alt="image" />
+      <p>
+        At flexNshape, we make group workouts fun, daily food healthy & tasty,
+        mental fitness easy with yoga & meditation, Medical & lifestyle care
+        hassle-free.#BeBetterEveryDay
+      </p>
+    </div>
+    <div class="f-p-2">
+      <ul>
+        <li><a href="https://flexnshape.github.io/FlexNShape_BlogPage/
+">blogs</a></li>
+        <li><a href="#">security</a></li>
+        <li><a href="#">carrers</a></li>
+      </ul>
+    </div>
+    <div class="f-p-3">
+      <ul>
+        <li><a href=" https://flexnshape.github.io/FlexNShape_ContactUs_Form/">contact us</a></li>
+        <li><a href=" https://flexnshape.github.io/T-C/
+">privacy policy</a></li>
+        <li><a href=" https://flexnshape.github.io/T-C/
+">terms & condition</a></li>
+      </ul>
+    </div>
+    <div class="f-p-4">
+      <img src="teamimg.jpeg" alt="image" />
+      <ul>
+        <li>
+          <a href="https://x.com/FlexNShape9"><i class="fa-brands fa-x-twitter"></i></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/flexnshape-7234a5327/"><i class="fa-brands fa-linkedin-in"></i></a>
+        </li>
+
+        <li>
+          <a href="https://www.instagram.com/flexnshape9?igsh=dW5kZzNlb21kZG12"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href="mailto:flexnshapehelp@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--footer- sec -2-->
+  <div class="foot-sec2">
+    <div>
+      <p class="t-p">
+        © 2024 flexNshape. All Rights Reserved By team flexNshape.
+      </p>
+    </div>
+    <div class="up-arrow"><a href="#about-us">↑</a></div>
+  </div>
+  </div>
+  <script>
+    function openSidebar(){
+    const sidebar = document.querySelector(".side-bar");
+    sidebar.style.display= "flex";
+  }
+  function hidesidebar(){
+    const sidebar = document.querySelector(".side-bar");
+    sidebar.style.display= "none";
+  }
+  </script>
+  <script src="app.js"></script>
+</body>
+
+</html>
